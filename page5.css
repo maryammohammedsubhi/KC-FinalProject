@@ -1,0 +1,543 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;800&display=swap');
+
+:root{
+   --red:#EEB0B0;
+   --black:#333;
+   --beige:#eeddd3;
+   --dark:#dab49d;
+   --white:#fff;
+   --light-bg:#f5f5f5;
+   --light-color:#333;
+   --border:.1rem solid var(--light-color);
+   --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
+}
+
+*{
+   font-family: 'Nunito', sans-serif;
+   margin:0; padding:0;
+   box-sizing: border-box;
+   outline: none; border:none;
+   text-decoration: none;
+   transition: .2s linear; 
+}
+
+*::selection{
+   background-color:var(--red);
+   color:white;
+ }
+
+ html{
+   font-size: 62.5%;
+   overflow-x: hidden;
+   scroll-behavior: smooth;
+   scroll-padding-top: 7.5rem;
+}
+
+ body{
+   background: var(--light-bg);
+   overflow-x: hidden;
+}
+
+section{
+   padding:2rem;
+   margin:0 auto;
+   max-width: 1200px;
+}
+ 
+
+.heading{
+   text-align: center;
+   margin-bottom: 2rem;
+   font-size: 4rem;
+   color:var(--black);
+   text-transform: uppercase;
+}
+
+::-webkit-scrollbar{
+   width: 10px;
+}
+
+::-webkit-scrollbar-track{
+   background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb{
+   background-color: var(--dark);
+}
+ 
+.btn{
+   display: block;
+   width: 100%;
+   margin-top: 1rem;
+   border-radius: .5rem;
+   padding:1rem 3rem;
+   font-size: 2rem;
+   color:var(--white);
+   background-color: var(--red);
+   cursor: pointer;
+   text-transform: capitalize;
+   text-align: center;
+}
+
+.btn:hover{
+   background-color:var(--black);
+}
+
+
+.header-1{
+    background:#eee;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:2rem 9%;
+  }
+  
+  .logo{
+    color:var(--black);
+    font-weight: bolder;
+    font-size: 3rem;
+  }
+  
+  .logo i{
+    padding-right: .5rem;
+    color:var(--red);
+  }
+  
+  .header-1 .search-box-container{
+    display: flex;
+    height:5rem;
+  }
+  
+  .header-1 .search-box-container #search-box{
+    height: 100%;
+    width:100%;
+    padding:1rem;
+    font-size: 2rem;
+    color:#333;
+    border:.1rem solid rgba(0,0,0,.3);
+    text-transform: none;
+  }
+  
+  .header-1 .search-box-container label{
+    height: 100%;
+    width:8rem;
+    font-size: 2.5rem;
+    line-height: 5rem;
+    color:#fff;
+    background:var(--red);
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  .header-1 .search-box-container label:hover{
+    background:var(--black);
+  }
+  
+  .header-2{
+    background:#fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:2rem 9%;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    position: relative;
+  }
+  
+  .header-2.active{
+    position: fixed;
+    top:0; left: 0; right:0;
+    z-index: 10000;
+  }
+  
+  .header-2 .navbar a{
+    padding:.5rem 1.5rem;
+    font-size: 2rem;
+    border-radius: .5rem;
+    color:var(--black);
+  }
+  
+  .header-2 .navbar a:hover{
+    background:var(--red);
+    color:#fff;
+  }
+  
+  .icons div{
+    font-size: 2.5rem;
+    color:var(--light-color);
+    cursor: pointer;
+    margin-left: 1.7rem;
+  }
+  
+  .icons div:hover{
+    color:var(--red);
+  }
+
+.user-account{
+   position: fixed;
+   top:0; right:-110%;
+   width: 100%;
+   z-index: 1100;
+   background-color: var(--white);
+   height: 100vh;
+   overflow-y: scroll;
+}
+
+.user-account.active{
+   right: 0;
+}
+
+.user-account #close-account{
+   text-align: right;
+   margin-bottom: 2.5rem;
+}
+
+.user-account #close-account span{
+   cursor: pointer;
+   font-size: 2.5rem;
+   color:var(--red);
+   text-decoration: underline;
+}
+
+.user-account #close-account span:hover{
+   color:var(--black);
+}
+
+.user-account .user{
+   padding:1.5rem;
+   text-align: center;
+   background-color: var(--light-bg);
+   border-radius: .5rem;
+}
+
+.user-account .user p{
+   font-size: 2rem;
+   color:var(--black);
+}
+
+
+.user-account .user p span{
+   color:var(--dark);
+   font-size:2rem;
+}
+
+
+.user-account .display-orders{
+   padding:3rem 2rem;
+   text-align: center;
+   background-color: var(--light-bg);
+   border-radius: .5rem;
+   margin:2rem 0;
+   display: flex;
+   align-items: flex-start;
+   justify-content: center;
+   gap:1.5rem;
+   flex-wrap: wrap;
+}
+
+.user-account .display-orders p{
+   padding:1rem 2.5rem;
+   font-size: 2rem;
+   color:var(--light-color);
+   background-color: var(--white);
+   border-radius: .5rem;
+   box-shadow: var(--box-shadow);
+}
+
+.user-account .display-orders p span{
+   color: var(--red);
+}
+
+.user-account .flex{
+   display: flex;
+   flex-wrap: wrap;
+   gap:2rem;
+   align-items: flex-start;
+}
+
+.user-account .flex form{
+   flex:1 1 40rem;
+   border-radius: .5rem;
+   padding:2rem;
+   background-color: var(--light-bg);
+}
+
+.user-account .flex form h3{
+   font-size: 2.5rem;
+   margin-bottom: 1rem;
+   text-transform: uppercase;
+   text-align: center;
+   color:var(--black);
+}
+
+.user-account .flex form .box{
+   width: 100%;
+   margin:1rem 0;
+   border-radius: .5rem;
+   background-color: var(--white);
+   padding:1.4rem;
+   font-size: 1.8rem;
+   color:var(--black);
+}
+
+.my-orders{
+   position: fixed;
+   top:0; right:-110%;
+   width: 35rem;
+   z-index: 1100;
+   background-color: var(--light-bg);
+   border-left: var(--border);
+   height: 100vh;
+   overflow-y: scroll;
+}
+
+.my-orders.active{
+   right: 0;
+}
+
+.my-orders #close-orders{
+   text-align: right;
+   margin-bottom: 2.5rem;
+}
+
+.my-orders #close-orders span{
+   cursor: pointer;
+   font-size: 2.5rem;
+   color:var(--red);
+   text-decoration: underline;
+}
+
+.my-orders #close-orders span:hover{
+   color:var(--black);
+}
+
+.my-orders .title{
+   text-align: center;
+   margin-bottom: 1rem;
+   color:var(--black);
+   font-size: 3rem;
+   text-transform: capitalize;
+}
+
+.my-orders .box{
+   background-color: var(--white);
+   border-radius: .5rem;
+   padding:1rem 2rem;
+   box-shadow: var(--box-shadow);
+   margin:1.5rem 0;
+}
+
+.my-orders .box p{
+   margin:1rem 0;
+   font-size: 1.7rem;
+   color:var(--light-color);
+   line-height: 1.5;
+}
+
+.my-orders .box p span{
+   color:var(--black);
+}
+
+.shopping-cart{
+   position: fixed;
+   top:0; right:-110%;
+   width: 35rem;
+   z-index: 1100;
+   background-color: var(--light-bg);
+   border-left: var(--border);
+   height: 100vh;
+   overflow-y: scroll;
+}
+
+.shopping-cart.active{
+   right: 0;
+}
+
+.shopping-cart #close-cart{
+   text-align: right;
+   margin-bottom: 2.5rem;
+}
+
+.shopping-cart #close-cart span{
+   cursor: pointer;
+   font-size: 2.5rem;
+   color:var(--red);
+   text-decoration: underline;
+}
+
+.shopping-cart #close-cart span:hover{
+   color:var(--black);
+}
+
+.shopping-cart .box{
+   display: flex;
+   position: relative;
+   align-items: center;
+   gap:1.5rem;
+   border-radius: .5rem;
+   box-shadow: var(--box-shadow);
+   padding:1.5rem;
+   background-color: var(--white);
+   margin:1.7rem 0;
+}
+
+.shopping-cart .box .fa-times{
+   position: absolute;
+   top:1.2rem; right:1.2rem;
+   font-size: 1.8rem;
+   cursor: pointer;
+   color:var(--red);
+}
+
+.shopping-cart .box .fa-times:hover{
+   color:var(--black);
+}
+
+.shopping-cart .box img{
+   width: 7rem;
+}
+
+.shopping-cart .box .content p{
+   font-size: 1.8rem;
+   color:var(--light-color);
+}
+
+.shopping-cart .box .content p span{
+   color:var(--red);
+}
+
+.shopping-cart .box .content form{
+   margin-top: 1.5rem;
+   display: flex;
+   gap:1rem;
+}
+
+.shopping-cart .box .content form .qty{
+   border:var(--border);
+   border-radius: .5rem;
+   padding:1rem;
+   font-size: 1.8rem;
+   color:var(--black);
+   width: 8rem;
+}
+
+.shopping-cart .box .content form .fa-edit{
+   width: 5.5rem;
+   font-size: 1.7rem;
+   cursor: pointer;
+   border-radius: .5rem;
+   background-color: var(--light-bg);
+   color:var(--black);
+}
+
+.shopping-cart .box .content form .fa-edit:hover{
+   background-color: var(--black);
+   color:var(--white);
+}
+
+.product .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap:1.5rem;
+    padding:1.5rem;
+  }
+  
+
+  .product .box-container .box{
+    flex:1 1 30rem;
+    text-align: center;
+    padding:2rem;
+    border:.1rem solid rgba(0,0,0,.3);
+    border-radius: .5rem;
+    overflow: hidden;
+    position: relative;
+    background-color: white;
+  }
+  
+  .product .box-container .box img{
+    height: 20rem;
+  }
+  
+  .product .box-container .box .discount{
+    position: absolute;
+    top:1rem; left: 1rem;
+    background:rgba(0,255,0,.1);
+    color:var(--green);
+    padding:.7rem 1rem;
+    font-size: 2rem;
+  }
+  
+  .product .box-container .box .icons{
+    position: absolute;
+    top:.5rem; right:-6rem;
+  }
+  
+  .product .box-container .box:hover .icons{
+    right:1rem;
+  }
+  
+  .product .box-container .box .icons a{
+    display: block;
+    height:4.5rem;
+    width:4.5rem;
+    line-height: 4.5rem;
+    font-size: 1.7rem;
+    color:var(--black);
+    background:rgba(0,0,0,.05);
+    border-radius: 50%;
+    margin-top: .7rem;
+  }
+  
+  .product .box-container .box .icons a:hover{
+    background:var(--red);
+    color:#fff;
+  }
+  
+  .product .box-container .box h3{
+    color:var(--black);
+    font-size: 2.5rem;
+  }
+  
+  .product .box-container .box .stars i{
+    padding:1rem .1rem;
+    font-size: 1.7rem;
+    color:gold;
+  }
+  
+  .product .box-container .box .price{
+    font-size: 2rem;
+    color:#333;
+    padding:.5rem 0;
+  }
+  
+  .product .box-container .box .price span{
+    font-size: 1.5rem;
+    color:#999;
+    text-decoration: line-through;
+  }
+  
+  .product .box-container .box .quantity{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 1rem;
+    padding-bottom: .5rem;
+  }
+  
+  .product .box-container .box .quantity span{
+    padding:0 .7rem;
+    font-size: 1.7rem;
+ 
+  }
+  
+  .product .box-container .box .quantity input{
+    border:.1rem solid rgba(0,0,0,.3);
+    font-size: 1.5rem;
+    font-weight: bolder;
+    color:var(--black);
+    padding:.5rem;
+    background:rgba(0,0,0,.05);
+  }
+  
+  .product .box-container .box .btn{
+    display: block;
+  }
